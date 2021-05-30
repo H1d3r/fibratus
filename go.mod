@@ -5,7 +5,7 @@ require (
 	github.com/Microsoft/go-winio v0.4.14
 	github.com/briandowns/spinner v1.12.0
 	github.com/dustin/go-humanize v1.0.0
-	github.com/hashicorp/go-version v1.2.1
+	github.com/hashicorp/go-version v1.3.0
 	github.com/hillu/go-yara/v4 v4.0.6
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/jedib0t/go-pretty/v6 v6.2.1
