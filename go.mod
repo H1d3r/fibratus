@@ -22,7 +22,7 @@ require (
 	github.com/spf13/viper v1.6.2
 	github.com/streadway/amqp v1.0.0
 	github.com/stretchr/objx v0.2.0 // indirect
-	github.com/stretchr/testify v1.5.1
+	github.com/stretchr/testify v1.7.2
 	github.com/valyala/bytebufferpool v1.0.0
 	github.com/valyala/gozstd v1.11.0
 	github.com/xeipuuv/gojsonschema v1.2.0
@@ -31,7 +31,7 @@ require (
 	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
 	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 go 1.16
