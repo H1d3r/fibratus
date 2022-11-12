@@ -6,7 +6,7 @@ require (
 	github.com/antchfx/htmlquery v1.2.5
 	github.com/briandowns/spinner v1.12.0
 	github.com/dustin/go-humanize v1.0.0
-	github.com/hashicorp/go-version v1.2.1
+	github.com/hashicorp/go-version v1.6.0
 	github.com/hillu/go-yara/v4 v4.2.4
 	github.com/jedib0t/go-pretty/v6 v6.2.1
 	github.com/lithammer/fuzzysearch v1.1.2
