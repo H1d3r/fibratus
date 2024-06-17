@@ -500,40 +500,35 @@ var rulesSchema = `
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"properties": {
-		"group": 		{"type": "string", "minLength": 1},
-        "description":  {"type": "string"},
-		"enabled":  	{"type": "boolean"},
-		"tags":			{"type": "array", "items": [{"type": "string", "minLength": 1}]},
-		"rules": 		{"type": "array", "items": {
-							"type": "object",
-							"properties": {
-								"name": 				{"type": "string", "minLength": 3},
-         			    	    "description":  		{"type": "string"},
-								"output": 				{"type": "string", "minLength": 5},
-								"severity":  			{"type": "string", "enum": ["low", "medium", "high", "critical"]},
-								"min-engine-version":  	{"type": "string", "minLength": 5, "pattern": "^([0-9]+.)([0-9]+.)([0-9]+)$"},
-								"condition": 			{"type": "string", "minLength": 3},
-								"action": 				{
-									"type": "array",
-									"items": {
-										"type": "object",
-										"properties": {
-											"name": 	{"type": "string", "enum": ["kill"]}
-										},
-										"required": ["name"],
-										"additionalProperties": false
-									}
-								}
-							},
-							"required": ["name", "condition", "min-engine-version"],
-							"minItems": 1,
-							"additionalProperties": false}},
-        "labels": {
+		"id": 					{"type": "string", "minLength": 36, "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"},
+		"version": 				{"type": "string", "minLength": 5, "pattern": "^([0-9]+.)([0-9]+.)([0-9]+)$"},
+		"name": 				{"type": "string", "minLength": 3},
+        "description":  		{"type": "string"},
+		"output": 				{"type": "string", "minLength": 5},
+		"notes": 				{"type": "string"},
+		"severity":  			{"type": "string", "enum": ["low", "medium", "high", "critical"]},
+		"min-engine-version":  	{"type": "string", "minLength": 5, "pattern": "^([0-9]+.)([0-9]+.)([0-9]+)$"},
+		"enabled":  			{"type": "boolean"},
+		"condition": 			{"type": "string", "minLength": 3},
+		"labels": 				{
   			"type": "object",
-  			"additionalProperties": { "type": "string" }
+  			"additionalProperties": { "type": "string"}
+		},
+		"tags":					{"type": "array", "items": [{"type": "string", "minLength": 1}]},
+		"references":			{"type": "array", "items": [{"type": "string", "minLength": 1}]},
+		"action": 				{
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": 	{"type": "string", "enum": ["kill"]}
+				},
+				"required": ["name"],
+				"additionalProperties": false
+			}
 		}
 	},
-	"required": ["group", "rules"],
+	"required": ["id", "version", "name", "condition", "min-engine-version"],
 	"additionalProperties": false
 }
 `
